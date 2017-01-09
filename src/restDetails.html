@@ -1,0 +1,163 @@
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+
+    <title>Exotic Food</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="css/bootstrap.min.css">    -->
+    <link rel="stylesheet" href="./css/review.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+<div id="loader"></div>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="single-page-nav">
+            <h1>
+                <a href="./"  class="page-title">Exotic Food</a>
+            </h1>
+
+        </div>
+    </div>
+</nav>
+<div class="site-content clear">
+    <div class="site-content clear">
+        <div id="container" >
+            <div class="primary">
+                <div class="post-header clear" style="width: 100%">
+                    <figure >
+                        <img id="imgRestDetail" src="http://demo.themegrill.com/masonic/wp-content/uploads/sites/15/2015/01/street-570x255.jpg" class="attachment-large-thumb size-large-thumb wp-post-image" alt="street"  sizes="(max-width: 570px) 100vw, 570px"></figure>
+                    <div class="col-s-12 pr20 restDetail">
+                        <div class="row mtop">
+                            <div class="col-l-12">
+                                <h1 class="res-name left mb0 .divRst" style="height: 5px;">
+                                    <h5 id="restName" class="ui large header left review-name">Hard Rock Cafe</h5>
+                                   <!-- <a  style="font-size: 120%"  id="restName" class="ui large header left">Hard Rock Cafe  </a>-->
+                                </h1>
+
+                                <div class="clear divRst" id="restAddress">
+                                    Address : ""
+                                </div>
+                                <div class="clear divRst" id="restCusine">
+                                    cuisine:""
+                                </div>
+                                <div class="clear divRst" id="restOpenTime">
+                                    opening Hours:""
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="underline"></div>
+                <div class="container">
+                    <div class="row" style="margin-top:40px;">
+                        <div class="col-md-6">
+                            <div class="well well-sm">
+                                <div class="text-center">
+                                    <a class="btn btn-success btn-green btn-search" href="#reviews-anchor" id="open-review-box">Leave a Review</a>
+                                </div>
+
+                                <div class="row" id="post-review-box" style="display:none;">
+                                    <div class="col-md-12">
+                                        <form accept-charset="UTF-8" action="" method="post">
+                                            <label id="lblMessage" name="message" class="lblMessage" ></label>
+                                            <input id="ratings-hidden" name="rating" type="hidden" >
+                                            <input id="rater-name" name="raterName" type="text" class="form-control animated" cols="50" placeholder="Enter your name here..." rows="5" aria-label="Enter your name" required/>
+                                            <textarea class="form-control animated" cols="50" id="new-review" name="comment" placeholder="Enter your review here..." rows="5" aria-label="Enter your review" required></textarea>
+                                            <div class="text-right">
+                                                <div class="stars starrr" data-rating="0"></div>
+                                                <a class="btn btn-danger btn-sm btn-cancel" href="#" id="close-review-box" style="display:none; margin-right: 10px;">
+                                                    <span class="glyphicon glyphicon-remove "></span>Cancel</a>
+                                                <button class="btn btn-success btn-lg btn-save" type="submit" id="save-review-box"><span style='Times New Roman'>Save</span></button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container" id="container-review-list">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="review-block-name"><a href="#">nktailor</a></div>
+                        <div class="review-block-date">January 29, 2016</div>
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="review-block-rate" id="review-container">
+                            <span class="glyphicon .glyphicon-star-empty glyphicon-star-empty starsDisplay"></span>
+                            <span class="glyphicon .glyphicon-star-empty glyphicon-star-empty starsDisplay"></span>
+                            <span class="glyphicon .glyphicon-star-empty glyphicon-star-empty starsDisplay"></span>
+                            <span class="glyphicon .glyphicon-star-empty glyphicon-star-empty starsDisplay"></span>
+                            <span class="glyphicon .glyphicon-star-empty glyphicon-star-empty starsDisplay"></span>
+
+                        </div>
+                        <div class="review-description">this was nice in buy. this was nice in buy. this was nice in buy. this was nice in buy this was nice in buy this was nice in buy this was nice in buy this was nice in buy</div>
+                    </div>
+                </div>
+                </div>
+                <div class="post-navigation clear">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Start Footer Area -->
+<!--<footer id="footer-area" class="bottom-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <p class="copy">
+
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>-->
+<!-- End Footer Area -->
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<!--<script src="js/jquery-1.11.2.min.js"></script>-->
+<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
+<script src="./js/review.js"></script>
+<script src="./js/restaurant.js"></script>
+<script>
+    $(function () {
+        var config = {
+            apiKey: "AIzaSyAlSilRGAxfbpkd4Jon0XvWKwnRARigrko",
+            authDomain: "restaurantreviewer-a9ab2.firebaseapp.com",
+            databaseURL: "https://restaurantreviewer-a9ab2.firebaseio.com",
+            storageBucket: "restaurantreviewer-a9ab2.appspot.com",
+            messagingSenderId: "568419294642"
+        };
+        firebase.initializeApp(config);
+
+        var objRest = new resaturentMaster();
+        var strId=getUrlVars("id");
+        objRest.loadRestaurantDetails(strId);
+        /*objRest.validateReview();*/
+    });
+    function getUrlVars(id)
+    {
+        var vars = "", hash;
+        var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+        for(var i = 0; i < hashes.length; i++)
+        {
+            hash = hashes[i].split('=');
+            if(hash[0]==id) {
+
+                vars = hash[1];
+                return vars;
+            }
+        }
+        return vars;
+    }
+</script>
+</body>
+</html>
