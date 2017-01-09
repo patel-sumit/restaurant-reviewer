@@ -1,6 +1,7 @@
 
-Restauranr 
-Reviewer
+**Restaurant Reviewer**
+
+In this project user can find different type of restaurant,also add review. 
 
 ## Prerequisites
 
